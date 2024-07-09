@@ -1,4 +1,4 @@
-package cl.ravenhill.library.books
+package cl.ravenhill.library.publications
 
 /**
  * Interface representing a book with a title.
@@ -8,13 +8,13 @@ package cl.ravenhill.library.books
  *
  * ### Example 1: Implementing the Book Interface
  * ```
- * class Novel(override val title: String) : Book
+ * class BookImpl(override val title: String) : Book
  *
- * val novel = Novel("The Two Towers")
- * println(novel.title) // Output: The Two Towers
+ * val book = BookImpl("The Two Towers")
+ * println(book.title) // Output: The Two Towers
  * ```
  * @property title The title of the book.
  */
-interface Book {
+interface Publication {
     val title: String
 }

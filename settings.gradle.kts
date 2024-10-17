@@ -14,3 +14,8 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
+include(
+    ":basics",
+    ":bounds",
+)

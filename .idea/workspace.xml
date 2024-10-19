@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758c3c0f-7b5b-402f-b046-9bea600eca12" name="Changes" comment="🔧 Add convention plugins and refactor project structure&#10;&#10;- 🏗️ Introduced new convention plugins to improve build consistency and maintainability.&#10;- 🗑️ Removed redundant files and updated project settings to align with the new configuration.&#10;- 📦 Enhanced dependency management with version catalogs and streamlined build scripts.">
-      <change afterPath="$PROJECT_DIR$/bounds/src/main/kotlin/cl/ravenhill/notifications/EmailNotificationSystem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bounds/src/main/kotlin/cl/ravenhill/repo/Entity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="758c3c0f-7b5b-402f-b046-9bea600eca12" name="Changes" comment="⬆️ Update dependencies in `libs.versions.toml`&#10;&#10;- 📦 Upgraded Kotlin to `2.0.21` and Detekt to `1.23.7`.&#10;- ➕ Added new Kotest dependencies and updated the Kotest bundle with modules for datatest, property-based testing, and extra arbs.">
+      <change afterPath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/bounds.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics/src/main/kotlin/cl/ravenhill/generics/repo/Repository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/kotlin/cl/ravenhill/generics/repo/Repository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics/src/main/kotlin/cl/ravenhill/generics/repo/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/kotlin/cl/ravenhill/generics/repo/UserRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -45,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin Script" />
       </list>
     </option>
   </component>
@@ -131,6 +132,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="RepositoryTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":bounds:test" />
+            <option value="--tests" />
+            <option value="&quot;cl.ravenhill.repo.RepositoryTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.RepositoryTest (1)" />
@@ -157,6 +182,8 @@
       <workItem from="1728957045773" duration="2041000" />
       <workItem from="1729091979243" duration="3664000" />
       <workItem from="1729136901591" duration="3455000" />
+      <workItem from="1729352809261" duration="2094000" />
+      <workItem from="1729354990922" duration="668000" />
     </task>
     <task id="LOCAL-00001" summary="🔧 Add convention plugins and refactor project structure&#10;&#10;- 🏗️ Introduced new convention plugins to improve build consistency and maintainability.&#10;- 🗑️ Removed redundant files and updated project settings to align with the new configuration.&#10;- 📦 Enhanced dependency management with version catalogs and streamlined build scripts.">
       <option name="closed" value="true" />
@@ -180,8 +207,20 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" Add convention plugins and refactor project structure&#10;&#10;- ️ Introduced new convention plugins to improve build consistency and maintainability.&#10;- ️ Removed redundant files and updated project settings to align with the new configuration.&#10;-  Enhanced dependency management with version catalogs and streamlined build scripts." />
-    <option name="LAST_COMMIT_MESSAGE" value=" Add convention plugins and refactor project structure&#10;&#10;- ️ Introduced new convention plugins to improve build consistency and maintainability.&#10;- ️ Removed redundant files and updated project settings to align with the new configuration.&#10;-  Enhanced dependency management with version catalogs and streamlined build scripts." />
+    <MESSAGE value="⬆️ Update dependencies in `libs.versions.toml`&#10;&#10;-  Upgraded Kotlin to `2.0.21` and Detekt to `1.23.7`.&#10;- ➕ Added new Kotest dependencies and updated the Kotest bundle with modules for datatest, property-based testing, and extra arbs." />
+    <option name="LAST_COMMIT_MESSAGE" value="⬆️ Update dependencies in `libs.versions.toml`&#10;&#10;-  Upgraded Kotlin to `2.0.21` and Detekt to `1.23.7`.&#10;- ➕ Added new Kotest dependencies and updated the Kotest bundle with modules for datatest, property-based testing, and extra arbs." />
   </component>
 </project>

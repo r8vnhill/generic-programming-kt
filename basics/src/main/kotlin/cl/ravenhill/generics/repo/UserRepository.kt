@@ -1,11 +1,11 @@
 package cl.ravenhill.generics.repo
 
-class UserRepository {
-    fun findByKey(username: String): User? {
-        TODO("Not yet implemented")
+class UserRepository : Repository<User, String> {
+    private val users = mutableMapOf<String, User>()
+
+    override fun save(item: User) {
+        users[item.username] = item
     }
 
-    fun save(user: User) {
-        TODO("Not yet implemented")
-    }
+    override fun findByKey(key: String) = users[key]
 }

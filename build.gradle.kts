@@ -1,4 +1,5 @@
 plugins {
+    id("bounds")
     id("jvm.conventions")
     alias(libs.plugins.detekt)
 }

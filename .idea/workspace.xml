@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758c3c0f-7b5b-402f-b046-9bea600eca12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/tasks/ModuleSetupTask.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="758c3c0f-7b5b-402f-b046-9bea600eca12" name="Changes" comment="🔄 Refactor module setup, add custom task, update Gradle&#10;&#10;- 🛠️ Refactored the module setup process by introducing a custom Gradle task `ModuleSetupTask` for improved modularity and reusability.&#10;- ⬆️ Updated Gradle wrapper configuration and properties files to reflect the new distribution and settings.&#10;- ⚙️ Adjusted Gradle execution scripts for better error handling and consistency.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convention-plugins/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/convention-plugins/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/bounds.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/jvm.conventions.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/bounds.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/bounds.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/tasks/ModuleSetupTask.kt" beforeDir="false" afterPath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/tasks/ModuleSetupTask.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -224,6 +216,20 @@
       <updated>1728590361195</updated>
       <workItem from="1728590362312" duration="4000" />
     </task>
+    <task id="LOCAL-00001" summary="🔄 Refactor module setup, add custom task, update Gradle&#10;&#10;- 🛠️ Refactored the module setup process by introducing a custom Gradle task `ModuleSetupTask` for improved modularity and reusability.&#10;- ⬆️ Updated Gradle wrapper configuration and properties files to reflect the new distribution and settings.&#10;- ⚙️ Adjusted Gradle execution scripts for better error handling and consistency.">
+      <option name="closed" value="true" />
+      <created>1729808580307</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729808580307</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="✨ Add `ModuleSetupTask` for modular setup&#10;&#10;- ️ Introduced `ModuleSetupTask` to streamline module creation with Gradle.&#10;-  Updated `setupBoundsModule` task to utilize the new task for modular and consistent project setup." />
+    <MESSAGE value=" Refactor module setup, add custom task, update Gradle&#10;&#10;- ️ Refactored the module setup process by introducing a custom Gradle task `ModuleSetupTask` for improved modularity and reusability.&#10;- ⬆️ Updated Gradle wrapper configuration and properties files to reflect the new distribution and settings.&#10;- ⚙️ Adjusted Gradle execution scripts for better error handling and consistency." />
+    <option name="LAST_COMMIT_MESSAGE" value=" Refactor module setup, add custom task, update Gradle&#10;&#10;- ️ Refactored the module setup process by introducing a custom Gradle task `ModuleSetupTask` for improved modularity and reusability.&#10;- ⬆️ Updated Gradle wrapper configuration and properties files to reflect the new distribution and settings.&#10;- ⚙️ Adjusted Gradle execution scripts for better error handling and consistency." />
   </component>
 </project>

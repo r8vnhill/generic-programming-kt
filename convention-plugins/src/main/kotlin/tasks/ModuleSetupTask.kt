@@ -44,6 +44,7 @@ abstract class ModuleSetupTask : DefaultTask() {
         } else if (module.get() !in settingsFile.readText()) {
             settingsFile.appendText("\ninclude(\"${module.get()}\")")
         }
+        println("The module ${module.get()} was added to the settings file")
     }
 
 
@@ -57,7 +58,10 @@ abstract class ModuleSetupTask : DefaultTask() {
 
     private fun createBuildFile() = baseDir.resolve("build.gradle.kts").run {
         if (exists()) printError("The build file already exists")
-        else writeText("// Intentionally left blank\n")
+        else {
+            writeText("// Intentionally left blank\n")
+            println("The build file was created successfully")
+        }
     }
 
     fun createFiles(packageName: String, vararg files: Pair<File, String>) {

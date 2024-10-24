@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758c3c0f-7b5b-402f-b046-9bea600eca12" name="Changes" comment="⬆️ Update dependencies in `libs.versions.toml`&#10;&#10;- 📦 Upgraded Kotlin to `2.0.21` and Detekt to `1.23.7`.&#10;- ➕ Added new Kotest dependencies and updated the Kotest bundle with modules for datatest, property-based testing, and extra arbs.">
-      <change afterPath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/bounds.gradle.kts" afterDir="false" />
+    <list default="true" id="758c3c0f-7b5b-402f-b046-9bea600eca12" name="Changes" comment="✨ Add Kotlin `bounds` module and update project configs&#10;&#10;- 🏗️ Created a new Gradle script for the `bounds` module with file and package setup.&#10;- ⚙️ Updated project configuration files to include the new module.&#10;- 🔧 Made adjustments to IDE settings for improved integration.">
+      <change afterPath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/tasks/ModuleSetupTask.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/src/main/kotlin/cl/ravenhill/generics/repo/Repository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/kotlin/cl/ravenhill/generics/repo/Repository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basics/src/main/kotlin/cl/ravenhill/generics/repo/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/basics/src/main/kotlin/cl/ravenhill/generics/repo/UserRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/bounds.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/convention-plugins/src/main/kotlin/bounds.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +31,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="generic-programming-kt" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="generic-programming-kt" type="f1a62948:ProjectNode" />
+                <item name="generic-programming-kt" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="generic-programming-kt" type="f1a62948:ProjectNode" />
+                <item name="generic-programming-kt" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
             <select />
@@ -81,23 +90,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.RepositoryTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Documentos/Code/Teaching/generic-programming-kt/gradle&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.RepositoryTest (1).executor": "Run",
+    "Gradle.RepositoryTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Documentos/Code/Teaching/generic-programming-kt/gradle",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Documentos\Code\Teaching\generic-programming-kt\gradle" />
@@ -106,8 +116,11 @@
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="cl.ravenhill.repo" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="tasks" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.convention-plugins [setupBoundsModule]">
     <configuration name="RepositoryTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -154,10 +167,33 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="convention-plugins [setupBoundsModule]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/convention-plugins" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="setupBoundsModule" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.convention-plugins [setupBoundsModule]" />
         <item itemvalue="Gradle.RepositoryTest (1)" />
       </list>
     </recent_temporary>
@@ -184,6 +220,7 @@
       <workItem from="1729136901591" duration="3455000" />
       <workItem from="1729352809261" duration="2094000" />
       <workItem from="1729354990922" duration="668000" />
+      <workItem from="1729806667859" duration="189000" />
     </task>
     <task id="LOCAL-00001" summary="🔧 Add convention plugins and refactor project structure&#10;&#10;- 🏗️ Introduced new convention plugins to improve build consistency and maintainability.&#10;- 🗑️ Removed redundant files and updated project settings to align with the new configuration.&#10;- 📦 Enhanced dependency management with version catalogs and streamlined build scripts.">
       <option name="closed" value="true" />

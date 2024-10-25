@@ -23,7 +23,7 @@ abstract class ModuleSetupTask : DefaultTask() {
         get() = baseDir.resolve("src/test/kotlin")
 
     private val baseDir: File
-        get() = project.rootProject.file(module)
+        get() = project.file(module.get().replace(":", "/"))
 
     init {
         group = "setup"

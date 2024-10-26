@@ -11,7 +11,7 @@ class NotificationSystemTest : FreeSpec({
             "should contain the handler" {
                 val system = EmailNotificationSystem()
                 val generalHandler = NotificationHandler<Notification>()
-                with(system) {
+                system.run {
                     handlers.shouldBeEmpty()
                     registerHandler(generalHandler)
                     handlers shouldHaveSize 1

@@ -17,5 +17,6 @@ dependencyResolutionManagement {
 
 include(
     ":basics",
-    ":bounds",
 )
+
+include("bounds")
